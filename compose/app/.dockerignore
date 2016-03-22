@@ -1,0 +1,11 @@
+## app
+node_modules
+
+## OSX
+.DS_Store
+
+## docker
+.dockerignore
+
+
+

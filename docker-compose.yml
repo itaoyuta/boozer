@@ -1,18 +1,15 @@
-myapp-app:
+boozer-app:
   build: compose/app
   volumes_from:
-    - myapp-dataonly
+    - boozer-dataonly
   volumes:
-    - /Users/yutaito/mydockerbuild/node3/compose/app:/usr/src/app
+    - /Users/yutaito/mydockerbuild/boozer/compose/app:/usr/src/app
 
-
-myapp-nginx:
+boozer-nginx:
   build: compose/nginx
   ports:
     - "80:80"
   links:
-    - myapp-app
-    # - myapp-app2
-    # - myapp-app3
+    - boozer-app
   volumes_from:
-    - myapp-dataonly
+    - boozer-dataonly

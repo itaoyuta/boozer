@@ -1,0 +1,21 @@
+{
+	"appenders": [
+		{
+			"type":     "dateFile",
+			"category": "system",
+			"filename": "/var/log/app/system.log",
+			"pattern":  "-yyyy-MM-dd"
+		},
+		{
+			"type":     "dateFile",
+			"category": "access",
+			"filename": "/var/log/app/access.log",
+			"pattern":  "-yyyy-MM-dd"
+		},
+		{
+			"type":     "dateFile",
+			"category": "error",
+			"filename": "/var/log/app/error.log",
+			"pattern":  "-yyyy-MM-dd"
+		}
+}

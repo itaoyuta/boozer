@@ -1,0 +1,23 @@
+{
+	"log4js": {
+		"level": "ALL",
+		"configure": {
+			"appenders": [
+				{
+					"category": "system",
+					"type": "console"
+				},
+				{
+					"category": "access",
+					"type": "console"
+				},
+				{
+					"category": "error",
+					"type": "console"
+				}
+			],
+			"replaceConsole": true
+		}
+	}
+}
+
