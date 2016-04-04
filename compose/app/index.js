@@ -4,6 +4,8 @@ var app = require('./lib/app')
 
 ;
 
+console.log('aabb');
+
 app.listen(port, function(){
 	console.log('listening on %d', port);
 });

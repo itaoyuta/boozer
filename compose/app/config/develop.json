@@ -17,6 +17,11 @@
 					"category": "error"
 					,"type": "file"
 					,"filename": "/var/log/app/error.log"
+				},
+				{
+					"category": "console"
+					,"type": "file"
+					,"filename": "/var/log/app/console.log"
 				}
 			],
 			"replaceConsole": true

@@ -5,18 +5,24 @@
   "main": "app.js",
   "scripts": {
     "start": "NODE_ENV=develop node index.js",
-    "test": "make test"
+    "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "co": "^4.6.0",
+    "co-views": "^2.1.0",
     "config": "^1.19.0",
+    "jade": "^1.11.0",
     "koa": "^1.2.0",
     "koa-router": "^5.4.0",
-    "log4js": "^0.6.33"
+    "koa-static": "^2.0.0",
+    "log4js": "^0.6.33",
+    "swig": "^1.4.2"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "mocha": "^2.4.5"
   }
 }
