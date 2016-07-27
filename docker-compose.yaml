@@ -1,0 +1,27 @@
+pci-app:
+  container_name: pci-app
+  build: compose/app
+  volumes_from:
+    - pci-data:rw
+  volumes:
+    - $PWD/compose/app:/usr/src/app
+
+pci-jenkins:
+  container_name: pci-jenkins
+  build: compose/jenkins
+  volumes_from:
+    - pci-data:rw
+  volumes:
+    - $PWD/localvol/jenkins_home:/var/jenkins_home
+
+pci-nginx:
+  container_name: pci-nginx
+  build: compose/nginx
+  ports:
+    - "80:80"
+  links:
+    - pci-app
+    - pci-jenkins
+  volumes_from:
+    - pci-data:rw
+

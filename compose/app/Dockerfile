@@ -1,7 +1,8 @@
 FROM node:latest
 
 RUN apt-get update
-RUN apt-get install -y nodejs npm vim 
+# RUN apt-get install -y nodejs npm vim 
+RUN apt-get install -y nodejs npm
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
