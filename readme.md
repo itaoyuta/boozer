@@ -16,6 +16,7 @@
 
 ### ハンズオン手順
 * docker、git環境はある前提
+* dockerはコンテナという単位で動かすことが基礎的なことだと説明
 
 1. 作業用dirを用意してください(~/Documents/handson/を作成)
 2. [git clone git@github.com:itaoyuta/boozer.git](https://github.com/itaoyuta/boozer)
@@ -41,5 +42,23 @@
 	$ docker-compose up -d
 	```
 
-6. [http://jenkins.docker-pci.local/](http://jenkins.docker-pci.local/), [app.docker-pci.local/](app.docker-pci.local/) へアクセスしてみる
-7. 
+6. [http://jenkins.docker-pci.local/](http://jenkins.docker-pci.local/), [app.docker-pci.local/](http://app.docker-pci.local/) へアクセスしてみる
+7. linkがないので作成してみる
+8. ~/Documents/handson/boozer/compose/dataonly/Dockerfile に書いてあるように、dataonlyの/usr/src/app/lib/public/datavol/が連携出来るデータ格納場所
+9. 以下作業
+
+	```
+	$ docker exec -it pci-data sh
+	$ cd /usr/src/app/lib/public/datavol
+	$ touch test.txt
+	$ vi test.txt
+	```
+10. 更新されたので[アクセス](http://app.docker-pci.local/)してみる
+11. nginxとかの紹介
+12. linkの紹介
+
+
+
+
+
+
